@@ -1,0 +1,664 @@
+@mixin grid-container {
+    display: grid;
+    grid-template-columns: [line1] 6% [line2] 4% [center] auto  [line3] 4% [line4] 6%;
+    grid-template-rows: 140px auto; 
+    grid-template-areas: 
+        '. header header header .'
+        '. . intro . .'
+
+    ;
+    @media only screen and (max-width: $screen-m) {
+       grid-template-rows: 0 auto;
+    }
+}
+
+@mixin grid-container-full {
+    display: grid;
+    grid-template-columns: [line1] 6% [line2] 4% [center] auto  [line3] 4% [line4] 6%;
+    grid-template-rows: 140px auto; 
+    grid-template-areas: 
+        '. header header header .'
+        '. . center . .'
+        
+
+    ;
+}
+
+@mixin grid-container-about {
+    display: grid;
+    grid-template-columns: [line1] 6% [line2] 4% [center] auto  [line3] 4% [line4] 6%;
+    grid-template-rows: 140px auto; 
+    grid-template-areas: 
+        '. header header header .'
+        '. . center . .'
+        '. . skills . .'
+    ;
+}
+
+
+@mixin flex-align {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex; 
+    justify-content: space-between;
+}
+
+@mixin flex-around {
+    display: flex; 
+    justify-content: space-around;
+}
+@mixin link-clear {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+@mixin button {
+    width: 300px;
+    min-width: 200px;
+    height: 55px;
+    border: 2px solid $gray;
+    color: $white;
+    background-color: $darkblue;
+    transition: all $transition;
+    outline: none;
+    &:hover {
+        background-color: $gray;
+        color: $darkblue;
+        font-size: 1.4rem;
+        font-weight: $font-weight-bold;
+    }
+    @media only screen and (max-width: $screen-s){
+        width: 80%;
+    }
+}
+
+@mixin transform-size {
+    transition: transform $transition;
+    &:hover {
+        transform: scale(1.1);
+        
+    }
+}
+
+@mixin text-selection-primary {
+    &::selection {
+        background-color: $text-selection-primary;
+    }
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin text-underline {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 11px;
+        width: 50px;
+        height: 5px;
+        color: $darkblue;
+    }
+}
+
+@mixin section-title {
+    grid-area: header;
+    font-size: $h-header;
+    @include flex-align;
+    @include flex-center;
+    text-decoration: underline;
+}
+
+// ================================================================= //
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: $font-stack-primary;
+}
+
+// ============ SCROLL =========== //
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: $gray;
+}
+::-webkit-scrollbar-thumb {
+    background-color: $darkerblue;
+}
+
+// ============ HEADER ========== //
+
+.container {
+    @include grid-container;
+    height: $height-full;
+    min-height: 700px;
+    background-color: $darkblue;
+}
+
+.menu {
+    background-color: $darkerblue;
+    @include flex-column;
+    justify-content: space-between;
+    width: 0%;
+    height: 100%;
+    position: fixed;
+    opacity: 0.95;
+    z-index: 1;
+    transition: width 0.4s ease;
+    .header-icons {
+        @include flex-center;
+        margin-bottom: 50px;
+        svg {
+            height: $header-icon-size;
+            width: $header-icon-size;
+            transition: opacity 0.13s ease;
+            padding: 10px;
+            opacity: 0;
+            
+        }
+    }   
+    ul { 
+        @include flex-center;
+        flex-direction: column;
+        opacity: 0;
+        @media only screen and (max-width: $screen-m){
+            width: 100%;
+            transition: opacity 0.13s ease;
+            margin-top: 50px;
+         }
+        li {
+            font-size: $nav-size;
+            list-style-type: none;  
+            font-weight: $font-weight-semi;
+            text-align: center;
+            padding: 25px;                   
+        }
+    }
+    a {
+        color: $white;
+        @include link-clear;
+        transition: color $transition;
+        &:hover {
+            color: $hover-primary;
+        }
+    }     
+}
+
+nav {
+    @include flex-between;
+    @include flex-align;
+    font-weight: $font-weight-bold;
+    grid-area: header;
+    .header-icons svg {
+        height: $header-icon-size;
+        width: $header-icon-size;
+        margin: 0 7px;
+        @include transform-size;
+        .cls-1 {
+            transition: fill $transition;
+        }
+        &:hover .cls-1 {
+            fill: $hover-primary;
+        }
+        @media only screen and (max-width: $screen-m){
+            display: none;         
+         }
+    }
+    ul { 
+        display: $flex;
+        flex-wrap: wrap;
+        @media only screen and (max-width: $screen-m){
+            display: none;
+            width: 100%;
+         }
+        li {
+            font-size: $nav-size;
+            list-style-type: none;  
+            font-weight: $font-weight-semi;
+            padding-left: 75px;  
+            @media only screen and (max-width: $screen-m){
+            }                       
+        }
+    }
+    a {
+        color: $white;
+        @include link-clear;
+        transition: color $transition;
+        &:hover {
+            color: $hover-primary;
+        }
+    } 
+    @media only screen and (max-width: $screen-m){
+        display: block;         
+     }
+}
+.toggle {
+    position: fixed;
+    width: 90%;
+    align-items: flex-end;
+    padding-top: 20px;
+    color: $white;
+    font-size: 2rem;
+    display: none;
+    flex-direction: column;
+    grid-area: header;
+    z-index: 1;
+    span {
+        width: 38px;
+        background-color: $white;
+        height: 5px;
+        margin: 3px;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+    .burger-anime:nth-child(1) {
+        transform: translateY(11px) rotate(-45deg)
+    }
+    .burger-anime:nth-child(2) {
+        opacity: 0;
+    }
+    .burger-anime:nth-child(3) {
+        transform: translateY(-11px) rotate(45deg)
+    }
+    @media only screen and (max-width: $screen-m){
+        display: flex;   
+              
+     }
+}
+.active {
+    display: block;
+}
+
+.intro {
+    grid-area: intro;
+    @include flex-align;
+    @include flex-center;
+    flex-direction: column;
+    padding-bottom: 70px;
+    text-align: center;
+    h1 {
+        font-size: $h1;
+        color: $white;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: textAnime 2.5s steps(23), blinkAnime 0.5s infinite alternate;
+        border-right: solid 2px $white;
+        @include text-selection-primary;
+        span {
+            color: $red;
+            text-decoration: underline;
+            &::selection {
+                background-color: $text-selection-primary;
+            }
+        }
+        @media screen and (max-width: $screen-m) {
+            animation: none;
+            border-right: none;
+            white-space: normal;
+        }
+    }
+    p {
+        font-size: $h3;
+        color: $gray;
+        width: 60%;
+        @include text-selection-primary;
+        @media only screen and (max-width: $screen-m){
+            width: 100%;
+            margin-top: 20px;
+        }
+        span {
+            color: $white;
+            text-decoration: underline;
+            font-weight: $font-weight-bold;
+            &::selection {
+                background-color: $red;
+            }
+        }
+    }
+    button {
+        @include button;
+        @include text-selection-primary;
+        font-size: $h3;
+        margin-top: 25px;
+        cursor: pointer;
+    }
+}
+
+/* ================== PORTFOLIO ===================== */
+
+.portfolio-container {
+    @include grid-container-full;
+    min-height: 100vh;
+    width: 100%;
+     @media only screen and (max-width: 1054px) {
+         height: auto;
+     }
+        h1 {
+            @include section-title;
+        }
+        
+        .project-container {
+            grid-area: center;
+            margin-bottom: 100px;
+            @include flex-between;
+            @include flex-center;
+            flex-wrap: wrap;
+            .card:nth-child(1) {
+                background-image: url('images/loandolphins.png')
+            }
+            .card:nth-child(3) {
+                background-image: url('images/calc.png');
+            }
+            .card {
+                flex-basis: 400px;
+                min-width: 45%;
+                overflow:hidden;
+                position: relative;
+                min-height: 300px;
+                height: auto;
+                margin: 10px;
+                background-image: url('images/calc.png');
+                background-size: cover;
+                background-position: 50% 50%;
+                object-fit: cover;
+                color: $white;
+                flex-grow: 1;
+                transition: all 1s ease;
+                &:nth-child(even) {
+                    text-align:right;
+                    @media only screen and (max-width: $screen-l) {
+                    text-align: center;
+                    }
+                }
+                &:nth-child(odd) .class-holder {
+                    transform: translateX(0px)
+                } 
+                &:nth-child(even) .class-holder {
+                    transform: translate(0px);
+
+                }
+                &:nth-child(odd):hover .class-holder {
+                    transform: translateX(101%);
+                    transition: 0.7s;
+                } 
+                &:nth-child(odd):hover .class-holder-info {
+                   left: 60%;
+                   @media only screen and (max-width: $screen-xl) {
+                       left: 55%;
+                   }
+                }
+                &:nth-child(even):hover .class-holder-info {
+                    left: 0%;
+
+                 }
+                 
+                &:nth-child(even):hover .class-holder {
+                    transform: translateX(-101%);
+                    transition: 0.7s;
+                } 
+                &:nth-child(even) .class-holder-info {
+                    top: 0%;
+                    left: -45%;
+                }
+                @include flex-center;
+                @include flex-column;
+                @media only screen and (max-width: $screen-s) {
+                    width: 100%;
+                    min-width: 200px;
+                    min-height: 250px;
+                    justify-content: flex-start;
+                    text-align: center;
+                }
+                a {
+                    @include link-clear;
+                    color: $white;
+                    height: 100%;        
+                }
+                .class-holder {
+                    transform: translate(-900px);
+                    min-height: 300px;
+                    width: 100%; 
+                    height: 100%;
+                    background-color: $darkblue;
+                    transition: all 0.5s ease;
+                    transition-delay: 0.25s;
+                    @include flex-between;
+                    @include flex-column;
+                    @media screen and (max-width: $screen-m) {
+                        transform: translateX(0px) !important;
+                        opacity: 0.9;
+                        text-align: center;
+                    }
+                    p {
+                        font-size: $p;
+                        margin: 10px;
+                        @media only screen and (max-width: $screen-s) {
+                            width: 90%;                       
+                        }
+                    }
+                    h3 {
+                        text-decoration: none;
+                        font-size: $h-header;
+                        margin: 10px   
+                    } 
+                }
+                .class-holder-info {
+                    height: 100%;
+                    width: 40%;
+                    position: absolute;
+                    top: 0%;
+                    left: 110%;
+                    background-color: $darkblue;
+                    text-align: left;
+                    transition: all 0.4s ease;
+                    transition-delay: 0.1s;
+                    @include flex-align;
+                    @media only screen and (max-width: $screen-m) {
+                        display: none;
+                    }
+                    @media only screen and (max-width: $screen-xl) {
+                        width: 45%;
+                    }
+                    .class-holder-wrapper {
+                        padding: 0 15px;
+                        height: 90%;
+                        @include flex-column;
+                        @include flex-between;
+                        @include flex-align;
+                        p {
+                            font-size: $p;
+                            color: $gray;
+                        }
+                        h3 {
+                            font-size: $h3;
+                            width: 100%;
+                        }
+                        a {
+                            width: 100%;
+                            height: 100%;
+                            padding: 20px;
+                            color: $white;
+                        }
+                        button {
+                            @include button;
+                            width: 100%;
+                            min-width: 0;
+                            height: 40px;
+                            color: $gray;
+                            font-weight: $font-weight-semi;
+                            &:hover {
+                                font-size: 14px;
+                            }
+                        }
+                    }     
+
+                    }
+                }
+            }
+        } 
+
+/* ===================== ABOUT ========================== */
+
+.about-container {
+    @include grid-container-about; 
+    background-color: $darkblue;
+    min-height: 100vh;
+    @media screen and (max-width: $screen-xl) {
+        height: auto;
+    }
+    h1 {
+        @include section-title;
+        color: $white;
+    }
+    .skills-container {
+        grid-area: center;
+        @include flex-center;
+        @include flex-around;
+        flex-wrap: wrap;       
+        @media screen and (max-width: $screen-m) {
+            justify-content: center;
+        }
+        .skill {
+            width: 25%;
+            margin-top: 30px;
+            min-width: 250px;
+            @include flex-align;
+            @include flex-column;
+        }
+        h3 {
+            color: $white;
+            font-size: $h3;
+            margin-top: 60px;
+            @media screen and (max-width: $screen-m) {
+                margin-top: 30px;
+            }
+        }
+        p {
+            color: $gray;
+            text-align: center;
+            font-size: $p;
+            @media screen and (max-width: $screen-m) {
+                margin-bottom: 30px;
+            }
+        }
+        svg {
+            height: 150px;
+            width: 150px;
+        }
+    }
+    .lower-section {
+        grid-area: skills;
+        @include flex-between;
+        flex-wrap: wrap;
+        margin: 30px 0;
+        .picture {
+            width: 48%;
+            min-width: 400px;
+            height: 83%;
+            img {
+                object-fit: cover;
+                height: 300px;
+                width: 100%;
+            }
+            @media screen and (max-width: $screen-l) {
+                min-width: 100%;
+                margin-bottom: 30px;
+            }
+            
+        }
+        .skills-measure {
+            @include flex-column;
+            width: 48%;
+            height: 83%;
+            min-height: 300px;
+            @include flex-between;
+            @media screen and (max-width: $screen-l) {
+                width: 100%
+            }
+            .fullwidth-measure {
+                height: 50px;
+                width: 100%;
+                background-color: $white;
+                &:nth-child(1) .skill-measure {
+                    width: 85%;  
+                }
+                &:nth-child(2) .skill-measure {
+                    width: 75%;
+                    transition-delay: 0.1s;
+                }
+                &:nth-child(3) .skill-measure {
+                    width: 70%;
+                    transition-delay: 0.2s;
+                }
+                &:nth-child(4) .skill-measure {
+                    width: 75%;
+                    transition-delay: 0.3s;
+                }
+                &:nth-child(5) .skill-measure {
+                    width: 70%;
+                    transition-delay: 0.4s;
+                }
+            }
+            .remover {
+                width: 0% !important;
+            }
+            .skill-measure {
+                height: 100%;
+                width: 30%;
+                background-color: $red;
+                z-index: 1;
+                transition: all 1.5s ease;
+            }
+
+            .skill-type {
+                @include flex-align;
+                @include flex-center;
+                color: $white;
+                background-color: darken($text-selection-primary, 6);
+                width: 120px;
+                height: 100%;
+                font-size: $p;
+                font-weight: $font-weight-semi;
+            }
+
+        }
+    }
+
+    
+
+}
+
+
+
+
+/* ===================== ANIMATIONS ===================== */
+
+@keyframes textAnime {
+    from {
+        width: 0;
+    }
+    to {
+        width: 600px;
+    }
+}
+@keyframes blinkAnime {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: $white;
+    }
+}
+
+

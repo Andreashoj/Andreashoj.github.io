@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Loan Dolphins</title>
+  
+</head>
+<body>
+  <div class="container">
+      <div class="header">
+        <nav>
+          <div class="nav-items">
+          <img class="nav-logo" src="images/logo.svg" alt="" height="100%" width="100%">
+          <ul>
+            <li><a href="#">WHY US</a></li>
+            <li><a href="#">STEPS</a></li>
+            <li><a href="#">TESTIMONIALS</a></li>
+            <li><a href="#">PARTNERS</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">HELP</a></li>
+            <li><a id="nav-arrowDown" class="dropdown" href="#">PAGES</a>
+              <div class="dropdown-hider">
+                <ul class="dropdown-items">
+                  <li><a href="">Static Elements</a></li>
+                  <li><a href="">Dynamic Elements</a></li>
+                  <li><a href="">Post Formats</a></li>
+                  <li><a href="">Blog Layouts</a></li>
+                  <li><a href="">Sidebar</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <button class="nav-button"><strong>JOIN US</strong></button>
+        </div>
+        </nav>
+        <div class="nav-burger">            
+          <label for="toggle" onClick="burgerFunction()">&#9776;</label>
+          <input type="checkbox" id="toggle">
+          <div class="menu">
+            <a href="#">WHY US</a>
+            <a href="#">STEPS</a>
+            <a href="#">TESTIMONIALS</a>
+            <a href="#">PARTNERS</a>
+            <a href="#">CONTACT</a>
+            <a href="#">HELP</a>
+            <a href="#">PAGES</a>
+          </div>
+        </div>
+        <div class="header-text">
+          <h1>Looking for Big Loans with Low Interest Rate?</h1>
+          <h4>Personal Loans at Fixed Rates from <span>5.95% APR</span> TO <span>12.99% APR</span> (with AutoPay)</h4>
+          <button>FIND MY RATE</button>
+          <h4>Call us for a Free Consultation at</h4>
+          <p class="header-p"><a href="#"><strong>855-456-7634</strong></a></p>
+          <p class="header-lower-p">Checking your rate will not effect your credit score</p>
+         </div>
+      </div>
+      <div class="benefits-section">
+        <div class="benefits-container">
+          <div>
+              <svg id="shield" data-name="Shield 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 354 484.39"><defs><style>.shield-1{fill:#f8f8f8;stroke:#3ad88f;stroke-miterlimit:10;stroke-width:18px;}.shield-checkmark{fill:#3ad88f;}</style></defs><title>shield</title>
+                <path class="shield-1" d="M242.54,6.47,232,0,221.46,6.47A217.35,217.35,0,0,1,64,34.4V280.32a169.74,169.74,0,0,0,23.26,85.84A164.32,164.32,0,0,0,162.9,433.7L232,464l69.1-30.3q5.55-2.4,10.9-5.27v-.05a164.61,164.61,0,0,0,64.71-62.22A169.78,169.78,0,0,0,400,280.29V34.4A217.35,217.35,0,0,1,242.54,6.47Z" transform="translate(-55 10.56)"/>
+                <path class="shield-checkmark" d="M167.83,248.83,216.5,297.5,336.67,177.33,320,160.67l-104,104-32-32Z" transform="translate(-55 10.56)"/></svg>            
+                <h3>Easy & Secure</h3>
+            <p>secure and confidential</p>
+          </div>
+          <div>
+            <svg id="clock" data-name="clock 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372.96 372.96"><defs><style>.clock-1{fill:#3ad88f;}</style></defs><title>clock</title><path class="clock-1" d="M186.48,0C83.49,0,0,83.49,0,186.48S83.49,373,186.48,373,373,289.47,373,186.48A186.71,186.71,0,0,0,186.48,0Zm8,356.56v-23.8a8,8,0,0,0-16,0v23.8A170.4,170.4,0,0,1,16.4,194.48H41.2a8,8,0,1,0,0-16H16.4A170.4,170.4,0,0,1,178.48,16.4V41.2a8,8,0,1,0,16,0V16.4A170.4,170.4,0,0,1,356.56,178.48h-22.8a8,8,0,0,0,0,16h22.88A170.4,170.4,0,0,1,194.48,356.56Z"/><path class="clock-inner" d="M270.88,260.88l-76.4-77.68V102.48a8,8,0,1,0-16,0v84a8,8,0,0,0,2.32,5.6l78.64,80a8,8,0,1,0,11.44-11.2Z"/></svg>
+            <h3>Get money <strong>in 1</strong></h3>
+            <p>...hour. Or even faster!</p>
+          </div>
+          <div>
+              <svg id="wallet" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 331.52 331.19"><defs><style>.wallet-1,.wallet-4,.dollar-sign{fill:#3ad88f;}.dollar,.white-background{fill:#f8f8f8;}.dollar{stroke:#3ad88f;stroke-miterlimit:10;stroke-width:14px;}</style></defs><title>wallet</title>
+                <rect class="wallet-1" x="32.13" y="46.27" width="251.18" height="12.85"/>
+                <g id="dollarBill">
+                  <rect class="dollar" x="86.05" y="23.78" width="156" height="206.63" rx="18.17" ry="18.17" transform="translate(170.05 -83.97) rotate(54.35)"/>
+                  <path class="dollar-sign" d="M173.1,121.22a15.8,15.8,0,0,1,7.64.53q3.93,1.23,7.06,5.78a14.75,14.75,0,0,1,2.59,7.24,14.53,14.53,0,0,1-1.81,8,21.16,21.16,0,0,1-7,7.43l-.2.14,3.62,5.28-2,1.4-3.71-5.41a21.08,21.08,0,0,1-13.06,2.89,15.58,15.58,0,0,1-10.41-5.71l6.4-4.39a10.91,10.91,0,0,0,6,3.53,11.64,11.64,0,0,0,7.9-1l-11.59-16.89a86.8,86.8,0,0,1-9.76,2.66,15.23,15.23,0,0,1-7.53-.51q-3.88-1.22-6.92-5.63a13.78,13.78,0,0,1-2.54-7.67,14.7,14.7,0,0,1,2.27-7.86,22.75,22.75,0,0,1,6.75-6.86l-3.89-5.67,2-1.41,3.94,5.75q6.45-3.75,12.34-2.94a15.72,15.72,0,0,1,9.77,5l-6.47,4.44a10.39,10.39,0,0,0-5.45-2.86,10.83,10.83,0,0,0-6.93,1.07l11.13,16.23A91,91,0,0,1,173.1,121.22Zm-20.88,4.42a22.78,22.78,0,0,0,8.45-1L149.9,108.9a11.27,11.27,0,0,0-4.81,6.06,9,9,0,0,0,7.13,10.68Zm30.83,13.49a9,9,0,0,0-1.56-7.08,8.15,8.15,0,0,0-6-3.87,22.39,22.39,0,0,0-8.62,1.15l11.22,16.37.07,0C180.93,143.78,182.55,141.61,183.05,139.13Z" transform="translate(-1.68 -3.68)"/>
+                </g>
+                <rect class="white-background" x="6.6" y="83.65" width="299.38" height="234.89"/>
+                <path class="wallet-4" d="M285,62.81A19.24,19.24,0,0,1,304.06,80H37.83a6.43,6.43,0,0,0,0,12.85H304.28V156h-47a39.63,39.63,0,0,0-39.59,39.58v2.77A39.64,39.64,0,0,0,257.28,238h47v64.79h0A19.3,19.3,0,0,1,285,322H33.81a19.3,19.3,0,0,1-19.28-19.28V82.09A19.3,19.3,0,0,1,33.81,62.81V50A32.17,32.17,0,0,0,1.68,82.09V302.74a32.18,32.18,0,0,0,32.13,32.14H285a32.18,32.18,0,0,0,32.14-32.14v-64.8H333.2V156H317.13V82.09A32.17,32.17,0,0,0,285,50Zm35.35,162.28H257.28a26.76,26.76,0,0,1-26.74-26.74v-2.76a26.76,26.76,0,0,1,26.74-26.74h63.06ZM277,197.5a14.19,14.19,0,1,1-14.19-14.19A14.19,14.19,0,0,1,277,197.5Z" transform="translate(-1.68 -3.68)"/></svg>
+            <h3 id=>Up to <strong>$100k</strong></h3>
+            <p>in cash or a wired transfer!</p>
+          </div>
+          <div>
+            <svg id="meter" data-name="meter 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 236.91 125.96"><defs><style>.meter-1, .meter-2{fill:#3ad88f;}</style></defs><title>speedometer</title>
+              <path class="meter-1" d="M203,90.89a7.06,7.06,0,0,0-.63-.72,7,7,0,0,0-.72-.62,118,118,0,0,0-83-34.07h0a118,118,0,0,0-83,34.07,6.38,6.38,0,0,0-1.34,1.34,118.07,118.07,0,0,0-34.07,83,7.5,7.5,0,0,0,7.5,7.5H229.57a7.5,7.5,0,0,0,7.5-7.5A118.11,118.11,0,0,0,203,90.89ZM138,149.6a31.25,31.25,0,0,1,10.83,16.83h-5.06s-5.57-18.74-25.15-18.74a26.24,26.24,0,0,0-25.14,18.74H88.41a31.08,31.08,0,0,1,35.94-23.08S134,145.58,138,149.6Zm-9.09-15.49a41.14,41.14,0,0,0-50.71,32.32H15.43a103,103,0,0,1,25-60.12l5.12,5.12a7.5,7.5,0,1,0,10.61-10.61L51,95.71a103,103,0,0,1,60.12-25v8.54a7.5,7.5,0,0,0,15,0V70.75a103,103,0,0,1,60.13,25l-5.12,5.11a7.5,7.5,0,1,0,10.61,10.61l5.11-5.12a103,103,0,0,1,25,60.12H159a41.19,41.19,0,0,0-16.55-26C138.83,136.82,128.9,134.11,128.9,134.11Z" transform="translate(-0.16 -55.48)"/>
+              <rect class="meter-2" x="113.1" y="36.52" width="10.72" height="76.87" rx="5.04" ry="5.04"/></svg>
+            <h3>Up to <strong>3 YRS</strong></h3>
+            <p>36 months of low rates</p>
+          </div>
+          </div>
+      </div>
+      <div class="transition-container">
+        <div class="transition-text">
+          <h3>Pay off Credit Cards or <br> Invest in a Major Purchase</h3>
+          <div id="divider-green"></div>
+          <p>Are you paying more than 10% of interest on your credit cards? LoanDolphins low interest rates will help you save thousands of dollars in payments. With the lowest rates and a fixed monthly payment, you can pay off high interest debt, like credit cards, or make a major purchase. It only takes minutes to apply.
+          </p>
+        </div> 
+      </div>
+      <div class="selling-container">
+        <div class="selling-section">
+          <div class="selling-left">
+          </div>
+          <div class="selling-right">
+            <h2>Stunning Repayment Flexibility <br> for Your Loan</h3>
+            <div></div>
+            <p>Paying off your personal loans gets easy within our online dashboard.</p>
+            <h4>Choose your preferred monthly payment</h4>
+            <h4>Increase your payment amount anytime</h4>
+            <h4>Make extra or early payments without fees</h4>
+            <h4>No fees, hidden or otherwise</h4>
+        </div>
+        </div>
+      </div>
+
+      <div class="offer-container">
+        <div class="offer-section">
+          <h2>WHY LoanOffer is the Smartest Choice?</h2>
+          <div class="offer-divider"></div>
+          <div class="offer-icons">
+            <div>
+                <svg id="strongbox" data-name="Capa 1" viewBox="0 0 512 480"><defs><style>.cls-1,.cls-4{fill:#fff;}.cls-1{stroke:#3ad88f;stroke-miterlimit:10;stroke-width:16px;}.cls-2{fill:#3ad88f;}.cls-3{fill:#287f53;}</style></defs><title>strongbox</title>
+                <g id="strongbox-hidden">
+                  <rect class="cls-1" x="86.33" y="56.23" width="342.67" height="323.42" rx="11.19" ry="11.19" style="fill: white; stroke-width: 18px; stroke: #3ad88f;"/>
+                  <path class="cls-2" d="M482,16H30A30,30,0,0,0,0,46V426a30,30,0,0,0,30,30H63v30a10,10,0,0,0,10,10h83a10,10,0,0,0,10-10V456H346v30a10,10,0,0,0,10,10h83a10,10,0,0,0,10-10V456h33a30,30,0,0,0,30-30V46A30,30,0,0,0,482,16ZM146,476H83V456h63Zm283,0H366V456h63Zm63-50a10,10,0,0,1-10,10H30a10,10,0,0,1-10-10V46A10,10,0,0,1,30,36H482a10,10,0,0,1,10,10Z" transform="translate(0 -16)"/>
+                  <rect class="cls-2" x="86.33" y="279.29" width="342.67" height="21.49"/>
+                  <path class="cls-2" d="M238.65,286.87a53.41,53.41,0,0,1-71.16-12.52l-15.26-20.08a10.83,10.83,0,0,0-12.12-3.71,23.24,23.24,0,0,1-27.05-9.42l-6.25-9.69a80.76,80.76,0,1,1,135.73-87.54l6.25,9.69a23.24,23.24,0,0,1-2.58,28.53,10.82,10.82,0,0,0-1.62,12.57l12,22.18A53.41,53.41,0,0,1,238.65,286.87Z" transform="translate(0 -16)"/>
+                  <path class="cls-3" d="M225.18,266a24.88,24.88,0,0,1-34.35-7.41l-20.2-31.33a24.85,24.85,0,1,1,41.76-26.93l20.21,31.32A24.88,24.88,0,0,1,225.18,266Z" transform="translate(0 -16)"/>
+                  <path class="cls-4" d="M138.13,211.25l-6.73-10.44a24.88,24.88,0,0,0,7.41-34.35l10.44-6.73A37.3,37.3,0,0,1,138.13,211.25Z" transform="translate(0 -16)"/><path class="cls-4" d="M211.22,164.11A37.31,37.31,0,0,1,159.69,153l10.45-6.73a24.87,24.87,0,0,0,34.35,7.41Z" transform="translate(0 -16)"/>
+                </g>
+                <g id="strongbox-skew">
+                  <rect class="cls-4" x="77.27" y="47.28" width="366" height="340"/>
+                  <path class="cls-2" d="M322.94,356a10,10,0,1,0,10,10A10,10,0,0,0,322.94,356Z" transform="translate(0 -16)"/>
+                  <path class="cls-2" d="M445.94,56h-366a10,10,0,0,0-10,10v51.72a30,30,0,0,0-20,28.28v40a30,30,0,0,0,20,28.28v43.44a30,30,0,0,0-20,28.28v40a30,30,0,0,0,20,28.28V406a10,10,0,0,0,10,10h366a10,10,0,0,0,10-10V66A10,10,0,0,0,445.94,56Zm-376,90a10,10,0,0,1,20,0v40a10,10,0,0,1-20,0Zm10,190a10,10,0,0,1-10-10V286a10,10,0,0,1,20,0v40A10,10,0,0,1,79.94,336Zm356,60h-346V354.28a30,30,0,0,0,20-28.28V286a30,30,0,0,0-20-28.3V214.28a30,30,0,0,0,20-28.28V146a30,30,0,0,0-20-28.3V76h346Z" transform="translate(0 -16)"/>
+                  <path class="cls-2" d="M222.94,136a90,90,0,1,0,90,90A90,90,0,0,0,222.94,136ZM279,267.92l-6.57-6.56A10,10,0,0,0,258.3,275.5l6.56,6.56a69.36,69.36,0,0,1-31.92,13.23V286a10,10,0,0,0-20,0v9.29A69.37,69.37,0,0,1,181,282.07l6.56-6.57a10,10,0,0,0-14.14-14.14l-6.56,6.56A69.28,69.28,0,0,1,153.65,236h9.29a10,10,0,0,0,0-20h-9.29a69.28,69.28,0,0,1,13.23-31.92l6.56,6.56a10,10,0,0,0,14.14-14.14L181,169.94a69.36,69.36,0,0,1,31.92-13.23V166a10,10,0,0,0,20,0v-9.29a69.28,69.28,0,0,1,31.92,13.23l-6.56,6.56a10,10,0,0,0,14.14,14.14l6.57-6.56A69.26,69.26,0,0,1,292.23,216h-9.29a10,10,0,1,0,0,19.9h9.29A69.63,69.63,0,0,1,279,267.92Z" transform="translate(0 -16)"/>
+                  <path class="cls-2" d="M222.94,196a30,30,0,1,0,30,30A30,30,0,0,0,222.94,196Zm0,40a10,10,0,1,1,10-10A10,10,0,0,1,222.94,236Z" transform="translate(0 -16)"/>
+                  <path class="cls-2" d="M382.94,136a30,30,0,0,0-30,30V286a30,30,0,0,0,60,0V166A30,30,0,0,0,382.94,136Zm10,150a10,10,0,0,1-20,0V166a10,10,0,0,1,20,0Z" transform="translate(0 -16)"/>
+                  <path class="cls-2" d="M282.94,356h-80a10,10,0,0,0,0,20h80a10,10,0,1,0,0-20Z" transform="translate(0 -16)"/></svg>
+              <h4>Serious Savings</h4>
+              <p>Borrow from $5k-$100k at fixed rates that start at 5.95% APR (with AutoPay)</p>
+            </div>
+            <div>
+                <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 465"><defs><style>.cls-1{fill:#3ad88f;}</style></defs><title>running</title>
+                  <path class="cls-1" d="M121,68.5H45a15,15,0,0,0,0,30h76a15,15,0,0,0,0-30Z" transform="translate(0 -23.5)"/><path class="cls-1" d="M121,188.5H45a15,15,0,0,0,0,30h76a15,15,0,0,0,0-30Z" transform="translate(0 -23.5)"/>
+                  <path class="cls-1" d="M91,128.5H15a15,15,0,0,0,0,30H91a15,15,0,0,0,0-30Z" transform="translate(0 -23.5)"/><path class="cls-1" d="M482,203.5H391v-60c0-26.35-32.23-40.22-51.22-21.2l-120,120a30,30,0,0,0,0,42.42l68.79,68.79-83.79,83.79a30,30,0,0,0,42.42,42.42l105-105a30,30,0,0,0,0-42.42L283.42,263.5,331,215.92V233.5a30,30,0,0,0,30,30H482a30,30,0,0,0,0-60Z" transform="translate(0 -23.5)"/>
+                  <path class="cls-1" d="M280.14,51a30,30,0,0,0-37.85,3.75l-82.5,82.5a30,30,0,0,0,42.42,42.42l65.11-65.11,21.94,15.8,29.3-29.31a59.68,59.68,0,0,1,17-11.67Z" transform="translate(0 -23.5)"/>
+                  <path class="cls-1" d="M198.58,305.92a59.39,59.39,0,0,1-15.35-27.07L24.79,437.29a30,30,0,0,0,42.42,42.42L219.79,327.13Z" transform="translate(0 -23.5)"/><circle class="cls-1" cx="406" cy="45" r="45"/></svg>
+              <h4>No Fees. No Catch.</h4>
+              <p>Simple online application and access to live customer support 7 days a week.</p>
+            </div>
+            <div>
+                <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 58"><defs><style>.cls-1{fill:#3ad88f;stroke-width:0px;}</style></defs><title>graph</title>
+                  <path class="cls-1" d="M20.87,30.72l-7.58,7.57a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l7.57-7.58a1,1,0,1,0-1.41-1.41Z" transform="translate(-2 0)" style="stroke-width: 1px !important;"/>
+                  <path class="cls-1" d="M24.61,30.19a1,1,0,1,0-1.42,1.42L35.31,43.72A1,1,0,0,0,36,44a1,1,0,0,0,.7-1.71Z" transform="translate(-2 0)"/>
+                  <path class="cls-1" d="M50.71,30.29a1,1,0,0,0-1.42,0l-13,13a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l13-13A1,1,0,0,0,50.71,30.29Z" transform="translate(-2 0)"/>
+                  <path class="cls-1" d="M3,57.5a1,1,0,0,1-1-1V1A1,1,0,0,1,4,1V56.5A1,1,0,0,1,3,57.5Z" transform="translate(-2 0)"/>
+                  <path class="cls-1" d="M2,56H59a1,1,0,0,1,0,2H2Z" transform="translate(-2 0)"/><circle class="cls-1" cx="10.62" cy="40" r="3.54"/><circle class="cls-1" cx="21" cy="30.42" r="3.54"/>
+                  <circle class="cls-1" cx="48.75" cy="30" r="3.54"/>
+                  <circle class="cls-1" cx="34.31" cy="43.02" r="3.54"/></svg>
+              <h4>Easy Experience</h4>
+              <p>No origination fees or pre-payment penalties. What you see is what you get.</p>
+            </div>
+            <div>
+                <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 563.43 536.6"><defs><style>.cls-1{fill:#3ad88f;}</style></defs><title>profile</title><path class="cls-1" d="M280.79,314.56a150.83,150.83,0,0,0,150.8-150.8c0-83.27-67.54-150.34-150.8-150.34S130,81,130,163.76,197.52,314.56,280.79,314.56Zm0-261.82c61.06,0,111,49.95,111,111s-50,111-111,111-111-50-111-111S219.73,52.74,280.79,52.74Z" transform="translate(0 -13.42)"/><path class="cls-1" d="M19.89,550H543.54a19.75,19.75,0,0,0,19.89-19.9c0-104.08-84.65-189.19-189.2-189.19h-185C85.12,340.93,0,425.58,0,530.12A19.75,19.75,0,0,0,19.89,550ZM189.2,380.71h185a149.31,149.31,0,0,1,148,129.52H41.17C50.88,437.61,113.33,380.71,189.2,380.71Z" transform="translate(0 -13.42)"/></svg>
+              <h4>Serious Savings</h4>
+              <p>Borrow from $5k-$100k at fixed rates that start at 5.95% APR (with AutoPay)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="image-container">
+        <div class="image-popup" id="image-popup">
+              <a href="javascript:;" onclick="modalPop()">
+                <img src="images/image-row/image1.jpg" alt="">
+                <span></span>
+              </a>
+
+              <a href="javascript:;">
+                  <img src="images/image-row/image2.jpg" alt="">
+                  <span></span>
+                </a> 
+
+              <a href="javascript:;">
+                  <img src="images/image-row/image3.jpg" alt="">
+                  <span></span>
+                </a>
+ 
+              <a href="javascript:;">
+                  <img src="images/image-row/image4.jpg" alt="">
+                  <span></span>
+                </a>
+              <a href="javascript:;">
+                  <img src="images/image-row/image5.jpg" alt="">
+                  <span></span>
+                </a>
+
+              <a href="javascript:;">
+                  <img src="images/image-row/image6.jpg" alt="">
+                  <span></span>
+                </a>
+        </div>
+      </div>
+
+      <div class="card-start">
+        <div class="card-container">
+            <div class="card-section">
+              <h2>Personal Loan Comparison</h2>
+              <div class="offer-divider"></div>
+              <p>Here's how LoanDolphins Personal Loans compare</p>
+              <div class="card-container">
+                <div class="card">
+                  <h3>Loan Offer</h3>
+                  <p>APR range:</p>
+                  <h4><strong>5.95% - 12.99%</strong></h4>
+                  <p>Fees: <span>No Fees</span></p>
+                  <p>Term: <span>3, 5 or 7 years</span></p>
+                  <p>Amount: <span>$5.000 - $100.000</span></p>
+                  <p>Unemployment Protection 4: <span>Yes</span></p>
+                </div>
+              <div class="card">
+                    <h3>Lending Club</h3>
+                    <p>APR range:</p>
+                    <h4><strong>5.99% - 35.66%</strong></h4>
+                    <p>Fees: <span>1 - 5% Origination Fee</span></p>
+                    <p>Term: <span>3 or 5 years</span></p>
+                    <p>Amount: <span>$1.000 - $40.000</span></p>
+                    <p>Unemployment Protection 4: <span>No</span></p>
+              </div>
+              <div class="card">
+                      <h3>Discover Personal Plan</h3>
+                      <p>APR range:</p>
+                      <h4><strong>6.99% - 29.99%</strong></h4>
+                      <p>Fees: <span>No Fees</span></p>
+                      <p>Term: <span>3, 4, 5, 6 or 7 years</span></p>
+                      <p>Amount: <span>$2.500 - $30.000</span></p>
+                      <p>Unemployment Protection 4: <span>No</span></p>
+               </div>
+               <div class="card">
+                        <h3>Credit Cards</h3>
+                        <p>APR range:</p>
+                        <h4><strong>11.16% - 22.56%</strong></h4>
+                        <p>Fees: <span>3% Balance Transfer Fee</span></p>
+                        <p>Term: <span>Rolling</span></p>
+                        <p>Amount: <span>Varies</span></p>
+                        <p>Unemployment Protection 4: <span>No</span></p>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+        
+        <div class="application-section">
+          <div class="application-container">
+          <h2>Fast application.<br>Fast process. So easy.</h2>
+          <div class="offer-divider"></div>
+          <p>Apply for a decision in minutes</p>
+          <div class="numbers">
+            <div class="number-card">
+              <h4>Find Your Rate</h4>
+              <p>Get pre-approved online with no fees and no long-term obligations.</p>
+            </div>
+            <div class="number-card">
+                <h4>Select Your Loan & Apply</h4>
+                <p>Choose the loan that fits you and complete your application.</p>
+           </div>
+            <div class="number-card">
+                  <h4>Put your e-signature in</h4>
+                  <p>Sign your documents and funds will be immediately wired to your account.</p>
+            </div>
+          </div>
+          </div>
+        </div>
+        
+        <div class="quotation-section">
+          <div class="quotation-container">
+            <h2>How we help people</h2>
+            <div class="offer-divider"></div>
+            <p class="w-80">With serious savings, a seamless online application, and unique community benefits, our members have a lot to say about our loans!              </p>
+            <div class="quotes">
+              <div class="quote-card">
+                <div class="quote-border">
+                <p>This has quite possibly been the best experience I’ve had—easy application process, rates, and great customer service.
+                  </p>
+                </div>
+                <div class="quote-person">
+                  <img src="images/profilepicture.jpg" alt="">
+                  <div class="quote-origin">
+                    <span>Komo Artz</span>
+                    <p>Revninge</p>
+                  </div>
+                </div>
+              </div>
+              <div class="quote-card">
+                <div class="quote-border">
+                 <p>My LoanDolphins personal loan will save me thousands of dollars in interest. The application process was fast and effortless.
+                  </p>
+                </div>
+                <div class="quote-person">
+                  <img src="images/profilepicture1.jpg" alt="">
+                  <div class="quote-origin">
+                    <span>Frederik Sander Brandt</span>
+                    <p>Kolding</p>
+                  </div>
+                </div>
+              </div>
+              <div class="quote-card">
+                 <div class="quote-border">
+                     <p>I know I’m making progress and [LoanDolphins has] given me the freedom to invest that money in other assets.                    </p>
+                 </div>
+                 <div class="quote-person">
+                  <img src="images/profilepicture2.jpg" alt="">
+                  <div class="quote-origin">
+                    <span>Jacob Serop</span>
+                    <p>Kerteminde</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="qna-section">
+          <div class="qna-container">
+            <div class="qna-question">
+              <h4 onclick="toggle()">How getting a LoanDolphins deal is different from getting into a credit card debt?</h4>
+              <div class="toggle-text">
+                <p>As opposed to credit pposed to creditpposed to credit cards’ variable rates – our loans have a fixed interest rate. This means on funding day 1 you’ll know your exact monthly payment schedule for the term of the loan!</p>
+              </div>
+            </div>
+            <div class="qna-divider"></div>
+            
+            <div class="qna-question">
+              <h4 onclick="toggle_second()">Why your interest rates are lower?</h4>
+              <div class="toggle-text">
+                <p>As opposed to credit cards’ variable rates – our loans have a fixed interest rate. This means on funding day 1 you’ll know your exact monthly payment schedule for the term of the loan!</p>
+              </div>
+            </div>
+            <div class="qna-divider"></div>
+            <div class="qna-question">
+              <h4 onclick="toggle_third()">What does ||underwriting|| means?</h4>
+              <div class="toggle-text">
+                <p>As opposed to credit cards’ variable rates – our loans have a fixed interest rate. This means on funding day 1 you’ll know your exact monthly payment schedule for the term of the loan!</p>
+              </div>
+            </div>
+            <div class="qna-divider"></div>
+          </div>
+         </div>
+
+         <div class="reference-section">
+           <div class="reference-container">
+             <h2>As featured on</h2>
+             <div class="offer-divider"></div>
+             <div class="logo-container">
+              <div>
+                <img src="images/logo1.png" alt="">
+              </div>
+              <div>
+                <img src="images/logo2.png" alt="">
+              </div>
+              <div>
+                <img src="images/logo3.png" alt="">
+              </div>
+              <div>
+                <img src="images/logo4.png" alt="">
+              </div>
+              <div>
+                <img src="images/logo5.png" alt="">
+              </div>
+            </div>
+           </div>
+         </div>
+
+         <div class="signup-section">
+           <div class="signup-container">
+             <div class="signup-left"></div>
+             <div class="signup-right">
+               <h2>See what LoanDolphins Can Offer You in 2 Minutes</h2>
+               <div></div>
+               <input type="text" placeholder="First name">
+               <input type="text" placeholder="Last name">
+               <input type="text" placeholder="State of residence">
+               <input type="email" placeholder="E-mail address">
+               <button>LETS GO</button>
+               <p>I have read, understood and consent to the language and authorizations outlined in LoanDolphin’s Electronic Communication Policy, LoanDolphins Social Policy, GLBA Privacy Notice, and Arbitration Agreement. We recommend that you retain a copy for your reference.</p>
+             </div>
+           </div>
+         </div>
+
+         <div class="contact-container">
+           <h2>Still Have Some Questions Left?<br>Call us for a <span>Free Consultation at 855-456-7634</span></h2>
+         </div>
+
+         <footer>
+           <div class="footer-container"> 
+            <div class="footer-email">
+              <p class="p-center">Get money management and loan tips here!</p>
+              <div class="footer-email-subscribe">
+                <input type="email" placeholder="Enter your email">
+                <button>SUBSCRIBE</button>
+              </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-menu">
+              <div class="footer-about">
+                <h5>About</h5>
+                <p>Monstroid 2 is a WordPress powered theme that fits for both developers and beginners. It comes loaded with an assortment of tools and features that make customization process much easier. A pack of child themes, specially designed for various business niches, allows users to create a fully functional site for any specific business quickly and worry-free.
+                  </p>
+              </div>
+              <div class="footer-navigation">
+                <h5>Navigation</h5>
+                <ul>
+                  <li>New Page Examples</li>
+                  <li>Parallax Section</li>
+                  <li>Retina Homepage</li>
+                  <li>Shortcode Central</li>
+                  <li>Theme</li>
+                  <li>Ultimate Font Collection</li>
+                </ul>
+              </div>
+              <div class="footer-comments">
+                <h5>Recent Comments</h5>
+                <p>Tom on</p>
+                <span>10 Reasons to Buy Monstroid2</span>
+                <p>Brian Williamson on</p>
+                <span>10 Reasons to Buy Monstroid2</span>
+                <p>Adam Smith on</p>
+                <span>10 Reasons to Buy Monstroid2</span>
+              </div>
+              <div class="footer-contacts">
+                <h5>Contacts</h5>
+                <p>Address: 4578 Marmora Road, Glasgow, D04 89GR</p>
+                <p>Phones: <a href="#">(800) 123-0045; (800) 123-0046</a></p>
+                <p>E-mail: <a href="#">info@demolink.org</a></p>
+                <p>We are open: Mn-Fr: 10 am-8 pm</p>
+              </div>
+            </div>
+           </div>
+         </footer>
+
+
+  </div>
+    <div class="modal">
+      <img src="images/image-row/image1.jpg" alt="">
+      <img src="images/image-row/image2.jpg" alt="">
+      <img src="images/image-row/image3.jpg" alt="">
+      <img src="images/image-row/image4.jpg" alt="">
+      <img src="images/image-row/image5.jpg" alt="">
+      <img src="images/image-row/image6.jpg" alt="">
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
