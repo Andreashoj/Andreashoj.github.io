@@ -50,14 +50,7 @@ window.addEventListener('scroll', function(){
     } else if(window.scrollY < screenHeight) {
         for(var i = 0; i < menuSpans.length; i++) {
         menuSpans[i] = menuSpans[i].style.backgroundColor = 'white'; }
-    } 
-    if (window.scrollY > (sectionOneHeight+(sectionThreeHeight/1.7))) {
-       var remover = window.document.querySelectorAll('.remover') 
-       for(var i = 0; i < remover.length; i++) {
-           remover[i].classList.remove('remover')
-       }
-       
-    }
+    }  
 })
 
 
