@@ -4,7 +4,7 @@
     grid-template-rows: 140px auto; 
     grid-template-areas: 
         '. header header header .'
-        '. . intro . .'
+        '. . intro top .'
 
     ;
     @media only screen and (max-width: $screen-m) {
@@ -144,6 +144,73 @@
     height: $height-full;
     min-height: 700px;
     background-color: $darkblue;
+    .to-top {
+        grid-area: top;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        position: fixed;
+        height: 50px;
+        width: 50px;
+        background-color: $darkblue;
+        border: 2px solid $darkblue;
+        bottom: 5%;
+        right: 4%;
+        transition: all 0.3s ease;
+        opacity: 0;
+        &:hover {
+            background-color: $white;
+        }
+        div {
+            height: 50px;
+            width: 50px;
+            @include flex-align;
+            @include flex-center;
+            &:hover svg {
+                transform: translateY(-7px);
+                .cls-1 {
+                    fill: $darkblue;
+                }
+            }
+            svg {
+            height: 25px;
+            width: 25px;
+            transition: all 0.3s ease;
+            .cls-1 {
+                fill: $white;
+                transition: all 0.3s ease;
+            }
+        }
+        }
+    }
+    .to-top-white {
+        background-color: $white !important;
+        border: 2px solid $darkblue !important;
+        &:hover {
+            background-color: $darkblue !important;
+            border: 2px solid $white !important;
+        }
+        &:hover .cls-1{
+            fill: $white !important;
+        }
+
+        .cls-1 {
+            fill: $darkblue !important;
+
+        }
+    }
+    .to-top-blue {
+        background-color: $darkblue !important;
+        &:hover {
+            background-color: $white !important;
+        }
+        &:hover .cls-1{
+            fill: $darkblue !important;
+        }
+        .cls-1 {
+            fill: $white !important;
+        }
+    }
 }
 
 .menu {
@@ -512,9 +579,9 @@ nav {
 /* ===================== ABOUT ========================== */
 
 .about-container {
-    @include grid-container-about; 
+    @include grid-container-full; 
     background-color: $darkblue;
-    min-height: 100vh;
+    height: 100vh;
     @media screen and (max-width: $screen-xl) {
         height: auto;
     }
@@ -522,117 +589,109 @@ nav {
         @include section-title;
         color: $white;
     }
-    .skills-container {
+    .about-container {
         grid-area: center;
+        height: 100%;
         @include flex-center;
-        @include flex-around;
-        flex-wrap: wrap;       
-        @media screen and (max-width: $screen-m) {
-            justify-content: center;
-        }
-        .skill {
-            width: 25%;
-            margin-top: 30px;
-            min-width: 250px;
-            @include flex-align;
-            @include flex-column;
-        }
-        h3 {
-            color: $white;
-            font-size: $h3;
-            margin-top: 60px;
-            @media screen and (max-width: $screen-m) {
-                margin-top: 30px;
-            }
-        }
-        p {
-            color: $gray;
-            text-align: center;
-            font-size: $p;
-            @media screen and (max-width: $screen-m) {
-                margin-bottom: 30px;
-            }
-        }
-        svg {
-            height: 150px;
-            width: 150px;
-        }
-    }
-    .lower-section {
-        grid-area: skills;
-        @include flex-between;
         flex-wrap: wrap;
-        margin: 30px 0;
-        .picture {
-            width: 48%;
-            min-width: 400px;
-            height: 83%;
-            img {
-                object-fit: cover;
-                height: 300px;
+        .about-me {
+            width: 50%;
+            min-width: 480px;
+            margin-bottom: 50px;
+            color: $white;
+            @media screen and (max-width: $screen-m) {
                 width: 100%;
-            }
-            @media screen and (max-width: $screen-l) {
                 min-width: 100%;
-                margin-bottom: 30px;
             }
-            
-        }
-        .skills-measure {
-            @include flex-column;
-            width: 48%;
-            height: 83%;
-            min-height: 300px;
-            @include flex-between;
-            @media screen and (max-width: $screen-l) {
-                width: 100%
-            }
-            .fullwidth-measure {
-                height: 50px;
-                width: 100%;
-                background-color: $white;
-                &:nth-child(1) .skill-measure {
-                    width: 85%;  
+            h2 {
+                position: relative;
+                @media screen and(max-width: $screen-m){
+                    text-align: center;
                 }
-                &:nth-child(2) .skill-measure {
-                    width: 75%;
-                    transition-delay: 0.1s;
-                }
-                &:nth-child(3) .skill-measure {
-                    width: 70%;
-                    transition-delay: 0.2s;
-                }
-                &:nth-child(4) .skill-measure {
-                    width: 75%;
-                    transition-delay: 0.3s;
-                }
-                &:nth-child(5) .skill-measure {
-                    width: 70%;
-                    transition-delay: 0.4s;
+                &::before {
+                    content: '<h2>' ;
+                    position: absolute;
+                    top: 5px;
+                    left: -60px;
+                    font-size: 16px;
+                    color: $white;
+                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    @media screen and(max-width: $screen-m){
+                        content: '';
+                    }
                 }
             }
-            .remover {
-                width: 0% !important;
-            }
-            .skill-measure {
-                height: 100%;
-                width: 30%;
-                background-color: $red;
-                z-index: 1;
-                transition: all 1.5s ease;
-            }
-
-            .skill-type {
-                @include flex-align;
-                @include flex-center;
-                color: $white;
-                background-color: darken($text-selection-primary, 6);
-                width: 120px;
-                height: 100%;
+            p {
                 font-size: $p;
                 font-weight: $font-weight-semi;
+                color: $gray;
+                position: relative;
+                @media screen and(max-width: $screen-m){
+                    text-align: center;
+                }
+                &::after {
+                    content: '<p>';
+                    position: absolute;
+                    top: 0px;
+                    left: -60px;
+                    font-size: 18px;
+                    color: $white;
+                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    @media screen and(max-width: $screen-m){
+                        content: '';
+                    }
+
+                }
+            }
+        }
+        .blog-section {
+            width: 50%;
+            @include flex-column;
+            @include flex-align;
+            @media screen and(max-width: $screen-l) {
+                order: -1;
             }
 
+            div {
+                position: relative;
+                height: 300px;
+                width: 450px;
+                background-image: url('images/group 59.svg');
+                background-position: center;
+                @media screen and(max-width: $screen-m){
+                    width: 300px;
+                }
+                &::before {
+                    content: 'COMING SOON';
+                    @include flex-align;
+                    @include flex-center;
+                    width: 470px;
+                    position: absolute;
+                    background-color: $red;
+                    font-size: $h3;
+                    color: $white;
+                    font-weight: $font-weight-bold;
+                    height: 50px;
+                    top: 30%;
+                    left: -2%;
+                    z-index: 1;
+                    transform: rotate(-3deg);
+                    @media screen and(max-width: $screen-m){
+                        width: 310px;
+                    }
+                }
+            }
+            a {
+                @include button;
+                @include flex-align;
+                @include flex-center;
+                margin: 20px 0;
+                width: 200px;
+                text-decoration: none;
+                &:hover {
+                    font-size: 16px;
+                }
+            }
         }
     }
 
@@ -738,7 +797,9 @@ nav {
             resize: none;
             &::placeholder {
                 color: $gray;
-
+            }
+            &:focus {
+                font-weight: $font-weight-semi;
             }
         }
         
@@ -790,6 +851,9 @@ footer {
         @include flex-center; 
     }
 }
+
+
+/* ===================== BACK-TO-TOP ====================== */ 
 
 
 

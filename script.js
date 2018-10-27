@@ -42,6 +42,12 @@ window.addEventListener('resize', function(){
 
 const screenHeight = window.innerHeight;
 const menuSpans = document.querySelectorAll('.toggle span');
+let toTop = document.querySelector('.to-top');
+let toTopSvg = document.querySelectorAll('.to-top svg .cls-1');
+let portfolioCon = document.querySelector('.portfolio-container').clientHeight;
+let aboutCon = document.querySelector('.about-container').clientHeight;
+let contactCon = document.querySelector('.contact-section').clientHeight;
+
 
 window.addEventListener('scroll', function(){      
     if(window.scrollY > screenHeight) {
@@ -50,7 +56,36 @@ window.addEventListener('scroll', function(){
     } else if(window.scrollY < screenHeight) {
         for(var i = 0; i < menuSpans.length; i++) {
         menuSpans[i] = menuSpans[i].style.backgroundColor = 'white'; }
-    }  
+    }
+    if(window.scrollY > 0) {
+        toTop.style.opacity = "1";
+    } else if (window.scrollY <= 0) {
+        toTop.style.opacity = "0";
+    }
+    
+    if (window.scrollY > portfolioCon) {
+        toTop.classList.add('to-top-white');
+        toTop.classList.replace('to-top-blue', 'to-top-white');
+        console.log('1')
+    } else if (window.scrollY < portfolioCon) {
+        toTop.classList.replace('to-top-white', 'to-top-blue');
+        console.log('2')
+    }
+
+    if (window.scrollY < (aboutCon+portfolioCon-15) && window.scrollY > portfolioCon) {
+        toTop.classList.replace('to-top-blue', 'to-top-white');
+        console.log('3')
+    } else if(window.scrollY > (aboutCon+portfolioCon-15)) {
+        toTop.classList.replace('to-top-white', 'to-top-blue');
+        console.log('4')
+    }
+    
+    if (window.scrollY > (aboutCon+portfolioCon+contactCon-15)) {
+        toTop.classList.replace('to-top-blue', 'to-top-white');
+        toTop.classList.add('to-top-white'); 
+    } 
+
+
 })
 
 
@@ -92,5 +127,9 @@ portfolioButton.addEventListener('click', function() {
 about.addEventListener('click', function() {
     smoothScroll('#about', 1000)
 });
+
+toTop.addEventListener('click', function(){
+    smoothScroll('.intro', 1000)
+} )
 
 

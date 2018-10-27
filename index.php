@@ -196,6 +196,26 @@
                 </p>
             <button id="workButton">View Work</button>
         </div>
+        
+        <div class="to-top">
+          <div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.2 18.444">
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #fff;
+                    }
+                  </style>
+                </defs>
+                <g id="Group_57" data-name="Group 57" transform="translate(-1557.68 -2934.68)">
+                  <rect id="Rectangle_70" data-name="Rectangle 70" class="cls-1" width="23.476" height="3" transform="translate(1557.68 2951.28) rotate(-45)"/>
+                  <rect id="Rectangle_71" data-name="Rectangle 71" class="cls-1" width="23.476" height="3" transform="translate(1589.035 2953.125) rotate(-135)"/>
+                </g>
+              </svg>
+    
+          </div>
+        </div>
+
       </div>
 
     
@@ -263,21 +283,47 @@
 
     <div class="about-container" id="about">
       <h1>ABOUT</h1>
+      <div class="about-container">
+        <div class="about-me">
+          <pre></pre>
+          <h2>About me</h2>
+          <p>
+              Lorem ipsum dolor sit amet, consectetur 
+              adipiscing elit. Maecenas non Lorem ipsum dolor 
+              sit amet, consectetur adipiscing elit. Maecenas
+              <br><br>
+              non quam elit. Pellentesque a arcu arcu. Lorem 
+              ipsum dolor sit amet, consectetur adipiscing elit. 
+              Maecenas non quam elit. Pellentesque a arcu 
+              arcu. Lorem ipsum dolor sit amet, consectetur 
+              adipiscing elit. Maecenas non quam elit.  
+              <br><br>
+              Pellentesque a arcu arcu. Lorem ipsum dolor sit 
+              amet, consectetur adipiscing elit. Maecenas non 
+              quam elit. Pellentesque a arcu arcu.
+              quam elit. Pellentesque a arcu arcu.
+              <br><br>
+              non quam elit. Pellentesque a arcu arcu. Lorem 
+              quam elit. Pellentesque a arcu arcu.</p>
+        </div>
+          <div class="blog-section">
+            <div></div>
+            <a href="#">View blog</a>
+          </div>
+        </div>
+      </div>
 
-
-
-    </div> 
 
     <div class="contact-section">
       <h1>CONTACT</h1>
-      <form action="">
+      <form action="contactform.php" method="post">
         <div class="form-container">
           <div>
-              <input type="name" placeholder="Name">
-              <input type="email" placeholder="Email">
+              <input type="text" name="name" placeholder="Name">
+              <input type="email" name="mail" placeholder="Email">
           </div>
-          <textarea placeholder="Have a question? Want to work together? Feel free to take contact!"></textarea>
-          <input type="submit" value="Send">
+          <textarea name="message " placeholder="Have a question? Want to work together? Feel free to take contact!"></textarea>
+          <input type="submit" name="submit" value="Send">
         </div>
       </form>
     </div>
@@ -364,7 +410,6 @@
       </ul>
       <p>© 2018 Andreas Høj</p>
     </footer>
-
 
 <script src="script.js"></script>
 </body>
